@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CGU & Mentions légales — Famille Treeatcore</title>
+  <style>
+    :root{
+      --bg:#0b0f17;
+      --card:#111827;
+      --text:#e5e7eb;
+      --muted:#9ca3af;
+      --line:rgba(255,255,255,.10);
+      --accent:#60a5fa;
+      --accent2:#34d399;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+    }
+    *{box-sizing:border-box}
+    html, body{width:100%; overflow-x:hidden}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      background: radial-gradient(1200px 600px at 10% 0%, rgba(96,165,250,.18), transparent 55%),
+                  radial-gradient(900px 500px at 100% 10%, rgba(52,211,153,.14), transparent 50%),
+                  var(--bg);
+      color:var(--text);
+      line-height:1.6;
+      word-break: break-word;
+      overflow-wrap: anywhere;
+    }
+    .wrap{
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 28px 16px 64px;
+    }
+    header{
+      padding: 18px 18px 14px;
+      border:1px solid var(--line);
+      background: linear-gradient(180deg, rgba(17,24,39,.85), rgba(17,24,39,.55));
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+    }
+    h1{
+      margin:0 0 6px;
+      font-size: clamp(22px, 2.6vw, 34px);
+      letter-spacing:.2px;
+    }
+    .sub{
+      margin:0;
+      color:var(--muted);
+      font-size: 14px;
+    }
+    .badge-row{
+      margin-top: 10px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+    }
+    .badge{
+      font-size: 12px;
+      color: rgba(255,255,255,.92);
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.06);
+      padding: 6px 10px;
+      border-radius: 999px;
+      max-width: 100%;
+      white-space: nowrap;
+    }
+    main{
+      margin-top: 16px;
+      display: grid;
+      gap: 14px;
+    }
+    section{
+      border:1px solid var(--line);
+      background: rgba(17,24,39,.55);
+      border-radius: 16px;
+      padding: 16px 18px;
+      box-shadow: 0 8px 22px rgba(0,0,0,.22);
+      min-width: 0;
+    }
+    h2{
+      margin: 0 0 10px;
+      font-size: 18px;
+      display:flex;
+      align-items:flex-start;
+      gap:10px;
+    }
+    .dot{
+      width:10px;height:10px;border-radius:999px;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      box-shadow: 0 0 0 3px rgba(96,165,250,.12);
+      flex:0 0 auto;
+      margin-top: 7px;
+    }
+    h3{
+      margin: 14px 0 8px;
+      font-size: 15px;
+      color: rgba(255,255,255,.95);
+    }
+    p{margin: 8px 0; color: rgba(229,231,235,.95)}
+    ul{margin: 8px 0 0; padding-left: 18px; color: rgba(229,231,235,.95)}
+    li{margin: 6px 0}
+    a{
+      color: var(--accent);
+      text-decoration: none;
+      word-break: break-word;
+      overflow-wrap: anywhere;
+    }
+    a:hover{text-decoration: underline}
+    .callout{
+      border:1px solid rgba(96,165,250,.25);
+      background: rgba(96,165,250,.10);
+      padding: 12px 12px;
+      border-radius: 14px;
+      color: rgba(255,255,255,.95);
+      margin-top: 10px;
+    }
+    .table-wrap{
+      margin-top: 10px;
+      border-radius: 14px;
+      border: 1px solid var(--line);
+      overflow: hidden;
+    }
+    .table-scroll{
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      background: rgba(17,24,39,.35);
+    }
+    .table{
+      width:100%;
+      min-width: 520px;
+      border-collapse: collapse;
+    }
+    .table th, .table td{
+      padding: 10px 12px;
+      border-bottom: 1px solid var(--line);
+      vertical-align: top;
+      text-align:left;
+      font-size: 14px;
+      word-break: break-word;
+      overflow-wrap: anywhere;
+    }
+    .table th{
+      color: rgba(255,255,255,.92);
+      background: rgba(255,255,255,.06);
+      font-weight: 600;
+      white-space: normal;
+    }
+    .table tr:last-child td{border-bottom:none}
+    .note{
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.05);
+      padding: 12px 12px;
+      border-radius: 14px;
+      color: rgba(229,231,235,.92);
+      margin-top: 10px;
+      font-size: 14px;
+    }
+    footer{
+      margin-top: 16px;
+      color: var(--muted);
+      font-size: 13px;
+      text-align: center;
+      padding-top: 10px;
+    }
+    code{
+      background: rgba(255,255,255,.08);
+      border:1px solid var(--line);
+      padding: 2px 6px;
+      border-radius: 8px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-size: 12px;
+      color: rgba(255,255,255,.92);
+      word-break: break-word;
+      overflow-wrap: anywhere;
+    }
+    @media (max-width: 640px){
+      .wrap{padding: 18px 12px 56px}
+      header{padding: 16px 14px 12px}
+      section{padding: 14px 14px}
+      h2{font-size: 16px}
+      h3{font-size: 14px}
+      .sub{font-size: 13px}
+      .badge{white-space: normal}
+      ul{padding-left: 18px}
+    }
+    @media (max-width: 380px){
+      h1{font-size: 20px}
+      .table{min-width: 480px}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>Conditions Générales d'Utilisation (CGU) & Mentions légales</h1>
+      <p class="sub"><strong>Famille Treeatcore</strong> — En vigueur au <strong>05/03/2026</strong></p>
+      <div class="badge-row">
+        <span class="badge">Publicités (AdMob)</span>
+        <span class="badge">Consentement (UMP / GDPR)</span>
+        <span class="badge">Stockage local (AsyncStorage)</span>
+      </div>
+    </header>
+    <main>
+      <section>
+        <h2><span class="dot"></span>1. Conditions Générales d'Utilisation</h2>
+        <h3>1.1 Objet</h3>
+        <p>
+          Les présentes CGU ont pour objet de définir les conditions d'accès et d'utilisation de l'application
+          <strong>Famille Treeatcore</strong> (ci-après « l'Application ») et de ses services.
+        </p>
+        <h3>1.2 Acceptation</h3>
+        <p>
+          L'utilisation de l'Application implique l'acceptation des présentes CGU. L'Utilisateur est invité à les consulter
+          régulièrement, l'Éditeur pouvant les faire évoluer.
+        </p>
+        <h3>1.3 Services proposés</h3>
+        <p>L'Application propose notamment :</p>
+        <ul>
+          <li>Des contenus informatifs liés à la grossesse, à la parentalité et au bien-être familial.</li>
+          <li>Des outils pratiques : générateur de prénoms, suivi de grossesse, calculateur de date d'accouchement, listes d'essentiels, suivi médical.</li>
+          <li>Des publicités (personnalisées ou non selon les choix de consentement et la réglementation applicable).</li>
+        </ul>
+        <h3>1.4 Publicités et consentement</h3>
+        <p>
+          L'Application peut afficher des publicités. Selon la zone géographique et la réglementation applicable,
+          un choix de consentement peut être proposé afin de déterminer si les publicités peuvent être personnalisées ou non.
+        </p>
+        <p>
+          Certaines fonctionnalités peuvent proposer un accès temporaire étendu en échange du visionnage d'une publicité vidéo (publicité récompensée).
+          Ce visionnage est toujours initié volontairement par l'Utilisateur.
+        </p>
+        <h3>1.5 Utilisation acceptable</h3>
+        <p>L'Utilisateur s'engage à utiliser l'Application de manière loyale et conforme à la loi. Il est notamment interdit de :</p>
+        <ul>
+          <li>Tenter d'entraver le bon fonctionnement de l'Application (surcharge, exploitation, contournement de sécurité).</li>
+          <li>Extraire, copier ou réutiliser le contenu de l'Application en dehors des usages autorisés.</li>
+          <li>Procéder à de la rétro-ingénierie ou tenter d'accéder au code source, sauf autorisation légale expresse.</li>
+        </ul>
+        <h3>1.6 Propriété intellectuelle</h3>
+        <p>
+          L'Application, ses éléments graphiques, textes, marques, logos et contenus sont protégés par le droit de la propriété intellectuelle.
+          Toute reproduction, représentation ou exploitation non autorisée est interdite.
+        </p>
+        <h3>1.7 Contenus informatifs — Avertissement santé</h3>
+        <p>
+          Les contenus de l'Application sont proposés à titre informatif et éducatif. Ils ne constituent en aucun cas
+          un avis médical, un diagnostic ou une prescription. L'Utilisateur est invité à consulter un professionnel de santé
+          qualifié pour toute question relative à sa grossesse, à sa santé ou à celle de son enfant.
+        </p>
+        <div class="callout">
+          <strong>Important :</strong> l'Application ne se substitue pas à un suivi médical. En cas d'urgence ou de doute,
+          contactez immédiatement votre médecin ou les services d'urgence.
+        </div>
+        <h3>1.8 Responsabilité</h3>
+        <p>
+          L'Éditeur met en œuvre les moyens raisonnables pour assurer l'accès et le bon fonctionnement de l'Application,
+          sans garantir l'absence d'erreurs, d'interruptions ou d'anomalies. L'Utilisateur utilise l'Application sous sa responsabilité.
+        </p>
+        <p>
+          L'Éditeur ne saurait être tenu responsable des dysfonctionnements imputables à des tiers (réseau, système d'exploitation,
+          services de distribution, services externes) ou à un cas de force majeure.
+        </p>
+        <h3>1.9 Liens externes</h3>
+        <p>
+          L'Application peut contenir des liens ou redirections vers des services externes. L'Éditeur n'exerce aucun contrôle
+          sur ces services et décline toute responsabilité quant à leur contenu ou fonctionnement.
+        </p>
+        <h3>1.10 Stockage local</h3>
+        <p>
+          Certaines informations peuvent être stockées localement sur l'appareil de l'Utilisateur (préférences, prénoms favoris,
+          listes de suivi, compteurs d'utilisation). L'Utilisateur peut supprimer ces données via les réglages de l'appareil
+          ou en désinstallant l'Application.
+        </p>
+        <h3>1.11 Données personnelles</h3>
+        <p>
+          Les informations relatives aux données personnelles et aux services tiers utilisés sont décrites dans la
+          <strong>Politique de confidentialité</strong> disponible à l'adresse suivante :
+          <a href="https://treeatcore.github.io/Politique-de-Confidentialit-Famille/" target="_blank" rel="noopener noreferrer">
+            https://treeatcore.github.io/Politique-de-Confidentialit-Famille/
+          </a>
+        </p>
+        <h3>1.12 Réclamations et support</h3>
+        <p>
+          Pour toute question, réclamation ou demande d'assistance, l'Utilisateur peut contacter l'Éditeur :
+          <strong>contact.treeatcore@gmail.com</strong>.
+        </p>
+        <div class="note">
+          Pour faciliter le traitement, merci d'indiquer le modèle de l'appareil, la version Android, la version de l'Application
+          et une description précise du problème rencontré.
+        </div>
+        <h3>1.13 Droit applicable et juridiction compétente</h3>
+        <p>
+          Les présentes CGU sont soumises au droit français. En cas de litige et à défaut de résolution amiable,
+          les tribunaux français seront compétents.
+        </p>
+      </section>
+      <section>
+        <h2><span class="dot"></span>2. Mentions légales</h2>
+        <div class="table-wrap">
+          <div class="table-scroll" role="region" aria-label="Informations légales" tabindex="0">
+            <table class="table">
+              <tbody>
+                <tr>
+                  <th>Éditeur</th>
+                  <td><strong>Kropfitsch Thomas</strong> (micro-entrepreneur)</td>
+                </tr>
+                <tr>
+                  <th>SIREN</th>
+                  <td><strong>932 161 169</strong></td>
+                </tr>
+                <tr>
+                  <th>Adresse</th>
+                  <td>6 RUE d'Armaillé, 75017 Paris, France</td>
+                </tr>
+                <tr>
+                  <th>Contact</th>
+                  <td><a href="mailto:contact.treeatcore@gmail.com">contact.treeatcore@gmail.com</a></td>
+                </tr>
+                <tr>
+                  <th>Directeur de publication</th>
+                  <td>Kropfitsch Thomas</td>
+                </tr>
+                <tr>
+                  <th>Distribution</th>
+                  <td>Google Play (Google LLC), 1600 Amphitheatre Parkway, Mountain View, CA 94043, États-Unis</td>
+                </tr>
+                <tr>
+                  <th>Hébergement des pages légales</th>
+                  <td>GitHub Pages (documents accessibles via treeatcore.github.io)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <h3>Accès à l'Application</h3>
+        <p>
+          L'Application est normalement accessible à tout moment. L'Éditeur peut toutefois en suspendre l'accès
+          temporairement pour maintenance, mise à jour ou amélioration, sans obligation d'information préalable.
+        </p>
+        <h3>Propriété intellectuelle</h3>
+        <p>
+          Toute utilisation, reproduction, diffusion ou modification de tout ou partie de l'Application sans autorisation
+          expresse de l'Éditeur est interdite et peut entraîner des poursuites conformément à la réglementation en vigueur.
+        </p>
+      </section>
+    </main>
+    <footer>
+      © Famille Treeatcore — Kropfitsch Thomas
+    </footer>
+  </div>
+</body>
+</html>
